@@ -1,0 +1,16 @@
+{
+  "invalidUser": {
+    "username": "usuarioInvalido",
+    "password": "secret_sauce"
+  },
+  "validUser": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "celvalido": {
+    "numerocel": "5545157885"
+  },
+  "celInvalido": {
+    "numerocel": "5545781598"
+  }
+}
