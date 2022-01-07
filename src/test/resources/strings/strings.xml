@@ -4,5 +4,5 @@
     <string name = "err_invalid_user_or_password">El usuario y contraseña no coinciden con ningun usuario en este servicio.</string>
     <string name = "product_title">PRODUCTOS</string>
     <string name = "err_num_invalid">Inténtalo nuevamente. Si el problema persiste comunícate con nosotros al 800 911 3466</string>
-
+    <string name="actipass desactivado">Activa ActiPass para:</string>
 </resources>

@@ -7,14 +7,14 @@
     <test name="Android">
         <parameter name="emulator" value="true"/>
         <parameter name="platformName" value="Android"/>
-        <parameter name="udid" value="emulator-5554"/>
-        <parameter name="deviceName" value="Pixel_3"/>
+        <parameter name="udid" value="A6R9K17116900084"/>
+        <parameter name="deviceName" value="Android Device"/>
         <parameter name="systemPort" value="10000"/>
         <parameter name="chromeDriverPort" value="11000"/>
         <classes>
 <!--            <class name="com.qa.test.OnboardingTest"/>-->
 <!--            <class name="com.qa.test.OriginAccountTest"/>-->
-            <class name="com.qa.test.LoginDinnTest"/>
+            <class name="com.qa.test.ActipassTest"/>
         </classes>
     </test>
 </suite>

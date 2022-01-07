@@ -185,7 +185,7 @@ public class BaseTest {
         HashMap<String, String> environment = new HashMap<String, String>();
         return AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                 .usingDriverExecutable(new File("C:\\Program Files\\nodejs\\node.exe"))
-                .withAppiumJS(new File("C:\\Users\\arturo.espinosa\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                .withAppiumJS(new File("C:\\Users\\ruben.benito\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
                 .usingPort(4723)
                 .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
                 .withLogFile(new File("ServerLogs/server.log")));
@@ -247,7 +247,7 @@ public class BaseTest {
                     desiredCapabilities.setCapability("chromeDriverPort", chromeDriverPort);
                     String androidAppUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test"
                             + File.separator + "resources" + File.separator + "app"
-                            + File.separator + "app-DINN_UATV3-5.8.6.release.apk";
+                            + File.separator + "eActinver.apk";
                     utils.log().info("appUrl is: " + androidAppUrl);
                     desiredCapabilities.setCapability(MobileCapabilityType.APP, androidAppUrl);
 

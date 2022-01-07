@@ -11,6 +11,7 @@
         <module name="TDDFramework" />
         <module name="TDDPocAutomation" />
         <module name="DinnAutomation" />
+        <module name="Actinver" />
       </profile>
     </annotationProcessing>
   </component>
