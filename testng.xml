@@ -5,7 +5,7 @@
         <listener class-name="com.qa.listeners.TestListeners"/>
     </listeners>
     <test name="Android">
-        <parameter name="emulator" value="true"/>
+        <parameter name="emulator" value="false"/>
         <parameter name="platformName" value="Android"/>
         <parameter name="udid" value="A6R9K17116900084"/>
         <parameter name="deviceName" value="Android Device"/>

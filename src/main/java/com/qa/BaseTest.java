@@ -333,10 +333,10 @@ public class BaseTest {
         ((InteractsWithApps) getDriver()).launchApp();
     }
 
-    public MobileElement scrollToElement(){
+    public MobileElement scrollToElement(String funcion, String argumento){
         return (MobileElement) ((FindsByAndroidUIAutomator) getDriver()).findElementByAndroidUIAutomator(
                 "new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
-                + "new UiSelector().description(\"test-Precio\"));");
+                + "new UiSelector()."+funcion+"(\""+argumento+"\"));");
     }
 
     public void iOSScrollToElement() {

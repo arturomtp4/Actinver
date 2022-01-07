@@ -16,8 +16,8 @@ public class ActipassTest extends BaseTest {
 
     @BeforeMethod
     public void beforeMethod(){
-        actipass_menu_sinActivar_copy_page=new Actipass_menu_sinActivar_Copy_Page();
         login_0_page=new Login_0_Page();
+        actipass_menu_sinActivar_copy_page=new Actipass_menu_sinActivar_Copy_Page();
     }
 
     @Test
