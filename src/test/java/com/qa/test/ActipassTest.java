@@ -23,7 +23,6 @@ public class ActipassTest extends BaseTest {
     @Test
     public void actipassDesactivadoTest() throws IOException {
         stepsExtentRepor("Paso 1 Dar click en el boton ActiPass");
-        System.out.println(login_0_page.getBotonActipass());
         click(login_0_page.getBotonActipass());
         stepsExtentRepor("Paso 2 Verificar mensaje -Activa ActiPass para-");
         Assert.assertEquals(actipass_menu_sinActivar_copy_page.getMensajeActivaActipassPara().getText(),
