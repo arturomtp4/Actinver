@@ -1,14 +1,13 @@
-package com.qa.pages;
-
+package com.qa.pages.actipass;
 import com.qa.BaseTest;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login_0_Page extends BaseTest {
+public class PantallaIngresarNumeroDeCliente extends BaseTest {
 
-    public Login_0_Page(){
+    public PantallaIngresarNumeroDeCliente(){
         PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
     }
 

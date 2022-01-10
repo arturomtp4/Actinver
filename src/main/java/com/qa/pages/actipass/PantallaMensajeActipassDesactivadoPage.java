@@ -2,14 +2,13 @@ package com.qa.pages.actipass;
 
 import com.qa.BaseTest;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-public class Actipass_menu_sinActivar_Copy_Page extends BaseTest {
+public class PantallaMensajeActipassDesactivadoPage extends BaseTest {
 
-    public  Actipass_menu_sinActivar_Copy_Page(){
+    public PantallaMensajeActipassDesactivadoPage(){
         PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
     }
 
