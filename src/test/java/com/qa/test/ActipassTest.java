@@ -31,4 +31,6 @@ public class ActipassTest extends BaseTest {
         stepsExtentRepor("Paso 3 Dar click en el boton entendido");
         click(actipass_menu_sinActivar_copy_page.getBotonEntendido());
     }
+
+
 }

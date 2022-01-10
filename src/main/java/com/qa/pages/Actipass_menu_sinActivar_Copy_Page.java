@@ -9,14 +9,9 @@ public class Actipass_menu_sinActivar_Copy_Page extends BaseTest {
     private MobileElement botonEntendido;
     private MobileElement mensajeActivaActipassPara;
 
-    public Actipass_menu_sinActivar_Copy_Page() {
-        this.botonEntendido = null;
-        this.mensajeActivaActipassPara = null;
-    }
-
     public MobileElement getBotonEntendido() {
-        if(botonEntendido==null)
-            botonEntendido = (MobileElement) getDriver().findElementById("com.actinver.eactinver:id/btn_continue_actipass_information");
+
+        botonEntendido = (MobileElement) getDriver().findElementById("com.actinver.eactinver:id/btn_continue_actipass_information");
         return botonEntendido;
     }
 
