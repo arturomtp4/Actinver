@@ -1,7 +1,7 @@
 package com.qa.test;
 
 import com.qa.BaseTest;
-import com.qa.pages.actipass.PantallaIngresarNumeroDeCliente;
+import com.qa.pages.actipass.PantallaIngresarNumeroDeClientePage;
 import com.qa.pages.actipass.PantallaMensajeActipassDesactivadoPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,11 +12,11 @@ import java.io.IOException;
 public class ActipassTest extends BaseTest {
 
     PantallaMensajeActipassDesactivadoPage pantallaMensajeActipass_desactivado_page;
-    PantallaIngresarNumeroDeCliente login_0_page;
+    PantallaIngresarNumeroDeClientePage login_0_page;
 
     @BeforeMethod
     public void beforeMethod(){
-        login_0_page=new PantallaIngresarNumeroDeCliente();
+        login_0_page=new PantallaIngresarNumeroDeClientePage();
         pantallaMensajeActipass_desactivado_page =new PantallaMensajeActipassDesactivadoPage();
     }
 

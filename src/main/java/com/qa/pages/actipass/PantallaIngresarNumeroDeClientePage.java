@@ -5,9 +5,9 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 
-public class PantallaIngresarNumeroDeCliente extends BaseTest {
+public class PantallaIngresarNumeroDeClientePage extends BaseTest {
 
-    public PantallaIngresarNumeroDeCliente(){
+    public PantallaIngresarNumeroDeClientePage(){
         PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
     }
 
