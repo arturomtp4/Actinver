@@ -1,8 +1,8 @@
 package com.qa.test;
 
 import com.qa.BaseTest;
-import com.qa.pages.Actipass_menu_sinActivar_Copy_Page;
 import com.qa.pages.Login_0_Page;
+import com.qa.pages.actipass.Actipass_menu_sinActivar_Copy_Page;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
