@@ -1,4 +1,5 @@
-package com.qa.pages.actipass;
+package com.qa.pages.saldos;
+
 import com.qa.BaseTest;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -11,7 +12,10 @@ public class PantallaIngresarNumeroDeClientePage extends BaseTest {
         PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
     }
 
-    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().resourceIdMatches(\"com.actinver.eactinver:id/btn_actipass_login\"))")
-    public MobileElement botonActipass;
+    @AndroidFindBy(id = "com.actinver.eactinver:id/textinput_placeholder")
+    public MobileElement numeroDeClienteTextbox;
 
+    @AndroidFindBy(id = "com.actinver.eactinver:id/btnContinueLogin")
+    public MobileElement continuarButton;
+    
 }

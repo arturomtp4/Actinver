@@ -11,24 +11,29 @@ import java.io.IOException;
 
 public class ActipassTest extends BaseTest {
 
-    PantallaMensajeActipassDesactivadoPage pantallaMensajeActipass_desactivado_page;
-    PantallaIngresarNumeroDeClientePage login_0_page;
+    PantallaMensajeActipassDesactivadoPage pantallaMensajeActipassDesactivadoPage;
+    PantallaIngresarNumeroDeClientePage pantallaIngresarNumeroDeClientePage;
 
     @BeforeMethod
     public void beforeMethod(){
-        login_0_page=new PantallaIngresarNumeroDeClientePage();
-        pantallaMensajeActipass_desactivado_page =new PantallaMensajeActipassDesactivadoPage();
+        pantallaIngresarNumeroDeClientePage=new PantallaIngresarNumeroDeClientePage();
+        pantallaMensajeActipassDesactivadoPage =new PantallaMensajeActipassDesactivadoPage();
     }
 
     @Test
     public void actipassDesactivadoTest() throws IOException {
+        // Paso 1
         stepsExtentRepor("Paso 1 Dar click en el boton ActiPass");
-        click(login_0_page.getBotonActipass());
+        click(pantallaIngresarNumeroDeClientePage.botonActipass);
+
+        // Paso 2
         stepsExtentRepor("Paso 2 Verificar mensaje -Activa ActiPass para-");
-        Assert.assertEquals(pantallaMensajeActipass_desactivado_page.getMensajeActivaActipassPara().getText(),
+        Assert.assertEquals(pantallaMensajeActipassDesactivadoPage.mensajeActivaActipassPara.getText(),
                 getStrings().get("actipass desactivado"));
+
+        // Paso 3
         stepsExtentRepor("Paso 3 Dar click en el boton entendido");
-        click(pantallaMensajeActipass_desactivado_page.getBotonEntendido());
+        click(pantallaMensajeActipassDesactivadoPage.botonEntendido);
     }
 
 

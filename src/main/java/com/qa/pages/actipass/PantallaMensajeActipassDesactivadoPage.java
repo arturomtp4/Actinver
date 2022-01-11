@@ -13,19 +13,9 @@ public class PantallaMensajeActipassDesactivadoPage extends BaseTest {
     }
 
     @AndroidFindBy(id = "com.actinver.eactinver:id/btn_continue_actipass_information")
-    private MobileElement botonEntendido;
+    public MobileElement botonEntendido;
 
     @AndroidFindBy(xpath = "(//android.widget.TextView)[1]")
-    private MobileElement mensajeActivaActipassPara;
+    public MobileElement mensajeActivaActipassPara;
 
-    public MobileElement getBotonEntendido() {
-
-        //botonEntendido = (MobileElement) getDriver().findElementById("com.actinver.eactinver:id/btn_continue_actipass_information");
-        return botonEntendido;
-    }
-
-    public MobileElement getMensajeActivaActipassPara() {
-        // = (MobileElement) ((AndroidDriver) getDriver()).findElementsByClassName("android.widget.TextView").get(0);
-        return mensajeActivaActipassPara;
-    }
 }
