@@ -2,10 +2,10 @@ package com.qa.test.dashboard_de_saldos;
 
 import com.qa.BaseTest;
 import com.qa.pages.saldos.*;
+import com.qa.pages.saldos.PantallaSaldosPage;
 import com.qa.utils.TestUtils;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
