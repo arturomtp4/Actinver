@@ -10,7 +10,8 @@ import java.util.List;
 public class PantallaIngresarContrasenaPage extends BaseTest {
 
     @FindAll({
-            @FindBy(id = "com.actinver.eactinver:id/editTextContraseña")
+            @FindBy(id = "com.actinver.eactinver:id/editTextContraseña"),
+            @FindBy(id = "com.actinver.eactinver:id/editTextContraseñ")
     })
     public List<MobileElement> contraseñaTextbox;
 

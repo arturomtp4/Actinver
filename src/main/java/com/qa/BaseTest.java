@@ -363,7 +363,7 @@ public class BaseTest {
         BaseTest base = new BaseTest();
         File file = base.getDriver().getScreenshotAs(OutputType.FILE);
         String device = base.getDeviceName().toString();
-        System.out.println("The Name of the Device is :::::::::::::: " + device);
+        System.out.println("The Name of the Device is :::::::::::::: " + device + ":  " + paso);
 
         Map <String,String> params = new HashMap<String, String>();
         String imagePath = "ScreenshotsReport" + File.separator + device

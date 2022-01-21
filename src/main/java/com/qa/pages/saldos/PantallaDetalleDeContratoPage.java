@@ -2,68 +2,70 @@ package com.qa.pages.saldos;
 
 import com.qa.BaseTest;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class PantallaDetalleDeContratoPage extends BaseTest {
 
     @FindAll({
             @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout[2]/android.view.View[1]")
     })
-    public MobileElement tabEfectivoButton;
+    public List<MobileElement> tabEfectivoButton;
 
     //No se puede mapear ya que no aparece en la interfaz del tab(switch) 'Efectivo'
-    public MobileElement verDetalleLink;
+    public List<MobileElement> verDetalleLink;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/btnVerDivisasSaldos")
     })
-    public MobileElement verDivisasLink;
+    public List<MobileElement> verDivisasLink;
 
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout[2]/android.view.View[2]")
-    public MobileElement tabInversionesButton;
+    @FindAll({
+            @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout[2]/android.view.View[2]")
+    })
+    public List<MobileElement> tabInversionesButton;
 
-    @AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout[2]/android.view.View[3]")
-    public MobileElement tabMovimientosButton;
+    @FindAll({
+            @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout[2]/android.view.View[3]")
+    })
+    public List<MobileElement> tabMovimientosButton;
 
-    @AndroidFindBy(id = "com.actinver.eactinver:id/imageButtonReturnToSaldos")
-    public MobileElement returnToSaldosButton;
-
-    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().scrollable(true))" +
-            ".scrollIntoView(new UiSelector().resourceId(\"com.actinver.eactinver:id/textViewInversionesTtitle\"))")
-    public MobileElement inversionesTextView;
+    @FindAll({
+            @FindBy(id = "com.actinver.eactinver:id/imageButtonReturnToSaldos")
+    })
+    public List<MobileElement> returnToSaldosButton;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/leftNav")
     })
-    public MobileElement leftNavSaldos;
+    public List<MobileElement> leftNavSaldos;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/rightNav")
     })
-    public MobileElement rightNavSaldos;
+    public List<MobileElement> rightNavSaldos;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/buttonVerDetalleSaldosInversiones")
     })
-    public MobileElement inversionesVerDetalleLink;
+    public List<MobileElement> inversionesVerDetalleLink;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/buttonReturnSaldosInversionesDetails")
     })
-    public MobileElement returnSaldosInversionesDetails;
+    public List<MobileElement> returnSaldosInversionesDetails;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/detallenIstrumentInversionesSaldos")
     })
-    public MobileElement verDetalleInstrumentoLink;
+    public List<MobileElement> verDetalleInstrumentoLink;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/buttonReturnInstrumentPortafolioSaldosDetails")
     })
-    public MobileElement returnFromPortafolioButton;
+    public List<MobileElement> returnFromPortafolioButton;
 
 
 }

@@ -5,6 +5,7 @@ import com.qa.pages.saldos.*;
 import com.qa.utils.TestUtils;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -39,16 +40,16 @@ public class DashboardDeSaldosTest extends BaseTest {
 
         // paso 2
         // De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // paso 3
         // Activar el tab "Efectivo".
-        click(pantallaDetalleDeContratoPage.tabEfectivoButton);
+        clickList(pantallaDetalleDeContratoPage.tabEfectivoButton,"pantallaDetalleDeContratoPage.tabEfectivoButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Efectivo");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para mostrar la seccion Efectivo Total sin divisas");
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -60,18 +61,18 @@ public class DashboardDeSaldosTest extends BaseTest {
 
         // paso 2
         // De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // paso 3
         // Activar el tab "Efectivo".
-        click(pantallaDetalleDeContratoPage.leftNavSaldos);
-        click(pantallaDetalleDeContratoPage.tabEfectivoButton);
+        clickList(pantallaDetalleDeContratoPage.leftNavSaldos, "pantallaDetalleDeContratoPage.leftNavSaldos");
+        clickList(pantallaDetalleDeContratoPage.tabEfectivoButton, "pantallaDetalleDeContratoPage.tabEfectivoButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Efectivo");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para mostrar la seccion Efectivo Total con divisas");
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -79,27 +80,27 @@ public class DashboardDeSaldosTest extends BaseTest {
     public void test003() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesión
         iniciarSesion();
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos,"pantallaSaldosPage.rightNavSeccionTusContratos");
 
         // Paso 2
         // De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3
         // Activar el tab "Efectivo".
-        click(pantallaDetalleDeContratoPage.leftNavSaldos);
-        click(pantallaDetalleDeContratoPage.tabEfectivoButton);
+        clickList(pantallaDetalleDeContratoPage.leftNavSaldos, "pantallaDetalleDeContratoPage.leftNavSaldos");
+        clickList(pantallaDetalleDeContratoPage.tabEfectivoButton, "pantallaDetalleDeContratoPage.tabEfectivoButton");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3 Dar click en el tab Efectivo");
 
         // Paso 4
         // Dar tab en link "Ver divisas"
         stepsExtentRepor("Paso 4-1 Dar tab en el link Ver Divisas");
-        click(pantallaDetalleDeContratoPage.verDivisasLink);
+        clickList(pantallaDetalleDeContratoPage.verDivisasLink, "pantallaDetalleDeContratoPage.verDivisasLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-2 Hacer scroll para ver la seccion de Divisas");
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -117,16 +118,16 @@ public class DashboardDeSaldosTest extends BaseTest {
 
         // paso 2
         // De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // paso 3
         // Activar el tab "Efectivo".
-        click(pantallaDetalleDeContratoPage.tabEfectivoButton);
+        clickList(pantallaDetalleDeContratoPage.tabEfectivoButton, "pantallaDetalleDeContratoPage.tabEfectivoButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Efectivo");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para mostrar la seccion Efectivo Total sin divisas");
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -139,16 +140,16 @@ public class DashboardDeSaldosTest extends BaseTest {
 
         // paso 2
         // De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // paso 3
         // Activar el tab "Efectivo".
-        click(pantallaDetalleDeContratoPage.tabEfectivoButton);
+        clickList(pantallaDetalleDeContratoPage.tabEfectivoButton, "pantallaDetalleDeContratoPage.tabEfectivoButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Efectivo");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para mostrar la seccion Efectivo Total sin divisas");
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -158,19 +159,19 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -180,28 +181,28 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -211,35 +212,35 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
         // Paso 5 "Dar tab en Link "Ver detalle" de un instrumento
         stepsExtentRepor("Paso 5-1 Dar click en el link ver detalles");
-        click(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
+        clickList(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink,"pantallaDetalleDeContratoPage.verDetalleInstrumentoLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
         stepsExtentRepor("Paso 5-2 Pantalla que muestra el detalle de un instrumento");
 
-        click(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -251,29 +252,29 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         //System.out.println(">>>>>>>>>>>>>>>> waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -285,36 +286,36 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton,"pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         //System.out.println(">>>>>>>>>>>>>>>> waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
         // Paso 5
         // "Dar tab en Link "Ver detalle" de un instrumento.
-        click(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
+        clickList(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink, "pantallaDetalleDeContratoPage.verDetalleInstrumentoLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
         stepsExtentRepor("Paso 5 Dar click en el link ver detalles");
 
-        click(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -327,31 +328,31 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         //System.out.println(">>>>>>>>>>>>>>>> waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
         // Paso 5
         // "Dar tab en Link "Ver detalle" de un instrumento.
-        click(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
+        clickList(pantallaDetalleDeContratoPage.verDetalleInstrumentoLink, "pantallaDetalleDeContratoPage.verDetalleInstrumentoLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
         stepsExtentRepor("Paso 5 Dar click en el link Ver Detalles");
 
         // Paso 6
@@ -360,9 +361,9 @@ public class DashboardDeSaldosTest extends BaseTest {
 
 
 
-        click(pantallaDetalleDeContratoPage.returnFromPortafolioButton);
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnFromPortafolioButton, "pantallaDetalleDeContratoPage.returnFromPortafolioButton");
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
 
     }
@@ -376,29 +377,29 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes CON pendientes por liquidar");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -410,28 +411,28 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes SIN pendientes por liquidar");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -444,34 +445,34 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
         // Paso 5 Activar el tab "Pendiente por liquidar"
-        click(pantallaInversionesPendientesPage.pendientePorLiquidarButton);
+        clickList(pantallaInversionesPendientesPage.pendientePorLiquidarButton, "pantallaInversionesPendientesPage.pendientePorLiquidarButton");
         Thread.sleep(500);
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 5 Dar click en el tab Pendiente Por Liquidar");
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -483,28 +484,28 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Inversiones".
-        click(pantallaDetalleDeContratoPage.tabInversionesButton);
+        clickList(pantallaDetalleDeContratoPage.tabInversionesButton, "pantallaDetalleDeContratoPage.tabInversionesButton");
         stepsExtentRepor("Paso 3-1 Dar click en el tab Inversiones");
-        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
+        waitForVisibility(pantallaDetalleDeContratoPage.inversionesVerDetalleLink,"pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 3-2 Scroll para visualizar el contenido del tab Inversiones");
 
         // Paso 4 Dar tab en Link "Ver detalle"
         stepsExtentRepor("Paso 4-1 Dar click en el link Ver Detalle");
-        click(pantallaDetalleDeContratoPage.inversionesVerDetalleLink);
-        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
+        clickList(pantallaDetalleDeContratoPage.inversionesVerDetalleLink, "pantallaDetalleDeContratoPage.inversionesVerDetalleLink");
+        waitForVisibility(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
         stepsExtentRepor("Paso 4-2 Pantalla de inversiones pendientes");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 4-3 Scroll down para visualizar todo el contenido");
 
         // Paso 5 Activar el tab "Pendiente por liquidar"
-        click(pantallaInversionesPendientesPage.pendientePorLiquidarButton);
+        clickList(pantallaInversionesPendientesPage.pendientePorLiquidarButton, "pantallaInversionesPendientesPage.pendientePorLiquidarButton");
         Thread.sleep(500);
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         stepsExtentRepor("Paso 5 Dar click en el tab Pendiente Por Liquidar");
@@ -512,10 +513,11 @@ public class DashboardDeSaldosTest extends BaseTest {
         // Paso 6 "Dar tab en Link "Ver detalle"
 
 
-        click(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails);
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnSaldosInversionesDetails, "pantallaDetalleDeContratoPage.returnSaldosInversionesDetails");
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
+
 
     @Test
     public void test017() throws IOException, InterruptedException {
@@ -523,20 +525,20 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Movimientos".
-        click(pantallaDetalleDeContratoPage.tabMovimientosButton);
+        clickList(pantallaDetalleDeContratoPage.tabMovimientosButton, "pantallaDetalleDeContratoPage.tabMovimientosButton");
         stepsExtentRepor("3-1 Dar click en el tab Movimientos");
         Thread.sleep(500);
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
         Thread.sleep(500);
         stepsExtentRepor("3-1 Se muestra el contenido del tab movimientos SIN movimientos");
 
-        click(pantallaDetalleDeContratoPage.returnToSaldosButton);
+        clickList(pantallaDetalleDeContratoPage.returnToSaldosButton, "pantallaDetalleDeContratoPage.returnToSaldosButton");
         cerrarSesion();
     }
 
@@ -546,13 +548,13 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Movimientos".
-        click(pantallaDetalleDeContratoPage.tabMovimientosButton);
+        clickList(pantallaDetalleDeContratoPage.tabMovimientosButton, "pantallaDetalleDeContratoPage.tabMovimientosButton");
         stepsExtentRepor("3-1 Dar click en el tab Movimientos");
         Thread.sleep(500);
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
@@ -570,13 +572,13 @@ public class DashboardDeSaldosTest extends BaseTest {
         iniciarSesion();
 
         // Paso 2 De la sección Tus contratos, dar tab en el Link "Ver detalle" de un contrato.
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.rightNavSeccionTusContratos);
-        click(pantallaSaldosPage.verDetalleLink);
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.rightNavSeccionTusContratos, "pantallaSaldosPage.rightNavSeccionTusContratos");
+        clickList(pantallaSaldosPage.verDetalleLink, "pantallaSaldosPage.verDetalleLink");
         stepsExtentRepor("Paso 2 Dar click en el link Ver Detalle");
 
         // Paso 3 Activar el tab "Movimientos".
-        click(pantallaDetalleDeContratoPage.tabMovimientosButton);
+        clickList(pantallaDetalleDeContratoPage.tabMovimientosButton, "pantallaDetalleDeContratoPage.tabMovimientosButton");
         stepsExtentRepor("3-1 Dar click en el tab Movimientos");
         Thread.sleep(500);
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
@@ -608,12 +610,12 @@ public class DashboardDeSaldosTest extends BaseTest {
         sendKeysList(pantallaIngresarNumeroDeClientePage.numeroDeClienteTextbox,loginUsers.getJSONObject("validUser").getString("username"), "pantallaIngresarNumeroDeClientePage.numeroDeClienteTextbox");
         stepsExtentRepor("Paso 1-1 Ingresar el numero de cliente");
         scroll(NumeroDePantallas.UNO, ScrollableElement.TRUE);
-        stepsExtentRepor("Paso 1-2 Dar click en el boton continuar");
+        stepsExtentRepor("Paso 1-2 Dar clickList en el boton continuar");
         clickList(pantallaIngresarNumeroDeClientePage.continuarButton, "pantallaIngresarNumeroDeClientePage.continuarButton");
         sendKeysList(pantallaIngresarContrasenaPage.contraseñaTextbox, loginUsers.getJSONObject("validUser").getString("password"),"pantallaIngresarContrasenaPage.contraseñaTextbox");
         stepsExtentRepor("Paso 1-3 Ingresar la contraseña");
         scroll(NumeroDePantallas.UNO, ScrollableElement.TRUE);
-        stepsExtentRepor("Paso 1-4 Dar click en el boton continuar");
+        stepsExtentRepor("Paso 1-4 Dar clickList en el boton continuar");
         clickList(pantallaIngresarContrasenaPage.continuarButton, "pantallaIngresarContrasenaPage.continuarButton");
     }
 
@@ -622,7 +624,7 @@ public class DashboardDeSaldosTest extends BaseTest {
         while (elementList.size()==0) {
             Thread.sleep(500);
             conteo=conteo + .5;
-            System.out.printf("clickList esperando... %s... %.1f segundos%n", nombre, conteo);
+            System.out.printf("clickListList esperando... %s... %.1f segundos%n", nombre, conteo);
         }
         click(elementList.get(0));
     }
@@ -632,9 +634,19 @@ public class DashboardDeSaldosTest extends BaseTest {
         while (elementList.size()==0) {
             Thread.sleep(500);
             conteo=conteo + .5;
-            System.out.printf("clickList esperando... %s... %.1f segundos%n", nombre, conteo);
+            System.out.printf("clickListList esperando... %s... %.1f segundos%n", nombre, conteo);
         }
         sendKeys(elementList.get(0),texto);
+    }
+
+    private void waitForVisibility(List<MobileElement> elementList, String nombre) throws InterruptedException {
+        double conteo =0;
+        while (elementList.size()==0) {
+            Thread.sleep(500);
+            conteo=conteo + .5;
+            System.out.printf("clickListList esperando... %s... %.1f segundos%n", nombre, conteo);
+        }
+        waitForVisibility(elementList.get(0));
     }
 
     public void cerrarSesion() throws IOException, InterruptedException {

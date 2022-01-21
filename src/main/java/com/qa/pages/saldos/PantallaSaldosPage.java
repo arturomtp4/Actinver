@@ -12,7 +12,7 @@ public class PantallaSaldosPage extends BaseTest {
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/detallenIstrumentInversionesSaldosPosicionIntegral")
     })
-    public MobileElement verDetalleLink;
+    public List<MobileElement> verDetalleLink;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/bottom_menu_hamburger_listener")
@@ -27,7 +27,7 @@ public class PantallaSaldosPage extends BaseTest {
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/rightNavSaldos")
     })
-    public MobileElement rightNavSeccionTusContratos;
+    public List<MobileElement> rightNavSeccionTusContratos;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/btn_logout_yes")
