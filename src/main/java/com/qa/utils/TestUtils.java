@@ -3,6 +3,8 @@ package com.qa.utils;
 import com.qa.BaseTest;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -86,5 +88,24 @@ public class TestUtils {
 
     public Logger log(){
         return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
+    }
+
+    public JSONObject getData() throws IOException {
+        InputStream datais = null;
+        JSONObject jsonObject;
+        try {
+            String dataFileName = "data/loginUsers.json";
+            datais = getClass().getClassLoader().getResourceAsStream(dataFileName);
+            JSONTokener tokener = new JSONTokener(datais);
+            jsonObject = new JSONObject(tokener);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }finally {
+            if (datais != null){
+                datais.close();
+            }
+        }
+        return jsonObject;
     }
 }
