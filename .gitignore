@@ -1,6 +1,3 @@
-videos/
-target/
-Screenshots/
-ScreenshotsReport/
-ServerLogs/
-logs/
+*
+!pages/
+!com.qa.test/
