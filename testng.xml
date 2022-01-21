@@ -7,14 +7,18 @@
     <test name="Android">
         <parameter name="emulator" value="false"/>
         <parameter name="platformName" value="Android"/>
-        <parameter name="udid" value="a8a2dc390505"/>
+        <parameter name="udid" value="emulator-5554"/>
         <parameter name="deviceName" value="Android Device"/>
         <parameter name="systemPort" value="10000"/>
         <parameter name="chromeDriverPort" value="11000"/>
         <classes>
 <!--            <class name="com.qa.test.OnboardingTest"/>-->
 <!--            <class name="com.qa.test.OriginAccountTest"/>-->
-            <class name="com.qa.test.ActipassTest"/>
+            <class name="com.qa.test.dashboard_de_saldos.DashboardDeSaldosTest">
+                <methods>
+                    <include name="pruebaTest"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

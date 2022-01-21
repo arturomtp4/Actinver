@@ -5,6 +5,8 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class PantallaSaldosPage extends BaseTest {
 
     @FindAll({
@@ -15,12 +17,12 @@ public class PantallaSaldosPage extends BaseTest {
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/bottom_menu_hamburger_listener")
     })
-    public MobileElement hamburguesaButton;
+    public List<MobileElement> hamburguesaButton;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/exit")
     })
-    public MobileElement salirButton;
+    public List<MobileElement> salirButton;
 
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/rightNavSaldos")
@@ -30,6 +32,6 @@ public class PantallaSaldosPage extends BaseTest {
     @FindAll({
             @FindBy(id = "com.actinver.eactinver:id/btn_logout_yes")
     })
-    public MobileElement confirmarCerrarSessionButton;
+    public List<MobileElement> confirmarCerrarSessionButton;
 
 }

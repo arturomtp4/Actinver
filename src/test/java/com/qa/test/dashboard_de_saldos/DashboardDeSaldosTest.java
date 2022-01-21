@@ -4,11 +4,13 @@ import com.qa.BaseTest;
 import com.qa.pages.saldos.*;
 import com.qa.utils.TestUtils;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.List;
 
 public class DashboardDeSaldosTest extends BaseTest {
 
@@ -31,7 +33,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test001() throws IOException {
+    public void test001() throws IOException, InterruptedException {
         // Paso 1 iniciar sesion
         iniciarSesion();
 
@@ -51,7 +53,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test002() throws IOException {
+    public void test002() throws IOException, InterruptedException {
 
         // Paso 1 iniciar sesion
         iniciarSesion();
@@ -74,7 +76,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test003() throws IOException {
+    public void test003() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesión
         iniciarSesion();
         click(pantallaSaldosPage.rightNavSeccionTusContratos);
@@ -109,7 +111,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // Validar que se muestren la descripción del
     // saldo negativo "…Por cobro de cuota anual"
     @Test
-    public void test005() throws IOException {
+    public void test005() throws IOException, InterruptedException {
         // Paso 1 iniciar sesion
         iniciarSesion();
 
@@ -131,7 +133,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // Validar que se muestren la descripción del
     // saldo negativo "…Por transacción en corto"
     @Test
-    public void test006() throws IOException {
+    public void test006() throws IOException, InterruptedException {
         // Paso 1 iniciar sesion
         iniciarSesion();
 
@@ -151,7 +153,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test007() throws IOException {
+    public void test007() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -173,7 +175,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test008() throws IOException {
+    public void test008() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -204,7 +206,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     }
 
     @Test
-    public void test009() throws IOException {
+    public void test009() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -244,7 +246,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // Verificar que al dar tab en el link "Ver detalles",
     // muestre el detalle del efectivo total.
     @Test
-    public void test010() throws IOException {
+    public void test010() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -278,7 +280,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // Verificar que al dar tab en el link "Ver detalles" de cada instrumento
     // de la lista se muestre con fondo ROJO los saldos Negativos.
     @Test
-    public void test011() throws IOException {
+    public void test011() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -320,7 +322,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // instrumento, muestre información "Precio actual por titulo"
     // y "Costo de títulos"
     @Test
-    public void test012() throws IOException {
+    public void test012() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -369,7 +371,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // liquidar..." en el detalle de inversiones cuando existen pendientes
     // por liquidar.
     @Test
-    public void test013() throws IOException {
+    public void test013() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -403,7 +405,7 @@ public class DashboardDeSaldosTest extends BaseTest {
     // Validar que NO se muestre el mensaje "Tienes operaciones pendientes por
     // liquidar..." en el detalle de inversiones cuando NO existen pendientes por liquidar.
     @Test
-    public void test014() throws IOException {
+    public void test014() throws IOException, InterruptedException {
         // Paso 1 Iniciar sesion
         iniciarSesion();
 
@@ -593,27 +595,53 @@ public class DashboardDeSaldosTest extends BaseTest {
 
     }
 
-    public void iniciarSesion() throws IOException {
+    @Test
+    public void pruebaTest() throws IOException, InterruptedException {
+        iniciarSesion();
+        cerrarSesion();
+    }
+
+    public void iniciarSesion() throws IOException, InterruptedException {
         // Paso 1
         // Iniciar sesión en la aplicación
 
-        sendKeys(pantallaIngresarNumeroDeClientePage.numeroDeClienteTextbox,loginUsers.getJSONObject("validUser").getString("username"));
+        sendKeysList(pantallaIngresarNumeroDeClientePage.numeroDeClienteTextbox,loginUsers.getJSONObject("validUser").getString("username"), "pantallaIngresarNumeroDeClientePage.numeroDeClienteTextbox");
         stepsExtentRepor("Paso 1-1 Ingresar el numero de cliente");
         scroll(NumeroDePantallas.UNO, ScrollableElement.TRUE);
         stepsExtentRepor("Paso 1-2 Dar click en el boton continuar");
-        click(pantallaIngresarNumeroDeClientePage.continuarButton);
-        sendKeys(pantallaIngresarContrasenaPage.contraseñaTextbox, loginUsers.getJSONObject("validUser").getString("password"));
+        clickList(pantallaIngresarNumeroDeClientePage.continuarButton, "pantallaIngresarNumeroDeClientePage.continuarButton");
+        sendKeysList(pantallaIngresarContrasenaPage.contraseñaTextbox, loginUsers.getJSONObject("validUser").getString("password"),"pantallaIngresarContrasenaPage.contraseñaTextbox");
         stepsExtentRepor("Paso 1-3 Ingresar la contraseña");
         scroll(NumeroDePantallas.UNO, ScrollableElement.TRUE);
         stepsExtentRepor("Paso 1-4 Dar click en el boton continuar");
-        click(pantallaIngresarContrasenaPage.continuarButton);
+        clickList(pantallaIngresarContrasenaPage.continuarButton, "pantallaIngresarContrasenaPage.continuarButton");
     }
 
-    public void cerrarSesion() throws IOException {
-        click(pantallaSaldosPage.hamburguesaButton);
+    private void clickList(List<MobileElement> elementList, String nombre) throws InterruptedException {
+        double conteo =0;
+        while (elementList.size()==0) {
+            Thread.sleep(500);
+            conteo=conteo + .5;
+            System.out.printf("clickList esperando... %s... %.1f segundos%n", nombre, conteo);
+        }
+        click(elementList.get(0));
+    }
+
+    private void sendKeysList(List<MobileElement> elementList, String texto, String nombre) throws InterruptedException {
+        double conteo =0;
+        while (elementList.size()==0) {
+            Thread.sleep(500);
+            conteo=conteo + .5;
+            System.out.printf("clickList esperando... %s... %.1f segundos%n", nombre, conteo);
+        }
+        sendKeys(elementList.get(0),texto);
+    }
+
+    public void cerrarSesion() throws IOException, InterruptedException {
+        clickList(pantallaSaldosPage.hamburguesaButton, "pantallaSaldosPage.hamburguesaButton");
         scroll(NumeroDePantallas.UNO, ScrollableElement.FALSE);
-        click(pantallaSaldosPage.salirButton);
-        click(pantallaSaldosPage.confirmarCerrarSessionButton);
+        clickList(pantallaSaldosPage.salirButton, "pantallaSaldosPage.salirButton");
+        clickList(pantallaSaldosPage.confirmarCerrarSessionButton, "pantallaSaldosPage.confirmarCerrarSessionButton");
     }
 
     private void scroll(NumeroDePantallas numeroDePantallas, ScrollableElement element) throws IOException {

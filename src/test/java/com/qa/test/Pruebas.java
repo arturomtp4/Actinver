@@ -5,8 +5,6 @@ import com.qa.test.dashboard_de_saldos.DashboardDeSaldosTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.time.Duration;
-import java.util.Base64;
 
 public class Pruebas extends BaseTest {
 
@@ -17,7 +15,7 @@ public class Pruebas extends BaseTest {
     }
 
     @Test
-    public void launchAPP() throws IOException {
+    public void launchAPP() throws IOException, InterruptedException {
         dashboardDeSaldosTest.iniciarSesion();
         dashboardDeSaldosTest.cerrarSesion();
     }

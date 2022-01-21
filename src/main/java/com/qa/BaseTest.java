@@ -375,7 +375,7 @@ public class BaseTest {
         }
     }
 
-    @AfterTest
+    //@AfterTest
     public void afterTest(){
         getDriver().quit();
     }
